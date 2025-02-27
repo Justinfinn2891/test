@@ -1,7 +1,8 @@
-#include <vector> 
+#include <vector>
+#include <string>
+#include <sstream>
 #ifndef STACK_H
 #define STACK_H
-#include <string>
 struct pixel{
   int red;
   int green;
@@ -17,6 +18,7 @@ class stack{
   int max_color;
   std::vector<pixel> pixels;
   std::string filename;
+  std::string padWithZeros(int number, int width);
  public:
   stack();
   void readFile(std::string filename, int amount);
